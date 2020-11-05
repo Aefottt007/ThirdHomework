@@ -1,14 +1,14 @@
 package com.thirdhomework.aefottt;
 
 public class Taojie implements Users{
-    private final Shops shop = new JD();
     @Override
-    public void buyGoods(Goods goods) {
+    public void buyGoods(Shops shop, Goods goods) {
         System.out.println("涛姐花了"+goods.getGoodsPrice()+"元买了"+goods.getGoodsName());
+        shop.receive(goods);
     }
 
     @Override
-    public void searchProgress(Goods goods) {
+    public void searchProgress(Shops shop, Goods goods) {
         shop.status(goods);
     }
 
