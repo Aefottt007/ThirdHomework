@@ -1,7 +1,7 @@
 package com.thirdhomework.aefottt;
 
 public interface Users {
-    void buyGoods(Goods goods);
-    void searchProgress(Goods goods);
+    void buyGoods(Shops shop, Goods goods);
+    void searchProgress(Shops shop, Goods goods);
     void getGoods(Goods goods);
 }
