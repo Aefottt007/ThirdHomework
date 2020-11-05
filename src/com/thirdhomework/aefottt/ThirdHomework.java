@@ -19,8 +19,7 @@ public class ThirdHomework {
 
     public static void main(String[] args) {
 //        level2();
-//        level3();
-
+        level3();
     }
 
     public static void level3(){
@@ -28,11 +27,10 @@ public class ThirdHomework {
         Shops jd = new JD();
         //涛姐看中了一款电脑并付首款
         Goods computer = new Goods("外星人X",99999);
-        taojie.buyGoods(computer);
         //京东收到了涛姐的订单并立刻开始配送
-        jd.receive(computer);
+        taojie.buyGoods(jd, computer);
         //涛姐在家里等的好着急，每天都要查看一遍订单
-        taojie.searchProgress(computer);
+        taojie.searchProgress(jd, computer);
         //几天后，涛姐心动的电脑终于到啦！！！
         jd.inform(taojie,computer);
         //涛姐欢快地去取了他的电脑，并开始了漫长且艰辛的安卓开发之旅
@@ -67,6 +65,7 @@ public class ThirdHomework {
             double result = ca.calculate(x,operate,y);
             if(result!=-1) System.out.println(x+operate+y+"="+result);
             else System.out.println("Warning:计算出错！");
+
             System.out.println("是否要继续计算？（输入1继续计算，输入2结束计算）");
             sc = new Scanner(System.in);
             while(!sc.hasNextInt()){
